@@ -5,16 +5,17 @@ public class Area {
         System.out.print("Enter the radius: ");
         Scanner input = new Scanner(System.in);
         try {
-            Double radius = input.nextDouble();
+            double radius = input.nextDouble();
             while (radius < 0) {
                 System.out.print("Invalid input! Enter the radius: ");
                 radius = input.nextDouble();
             }
-            Double area = Circle.getArea(radius);
+            double area = Circle.getArea(radius);
             System.out.println("The area of a circle of radius " + radius + " is: " + area);
         }
         catch (Exception e) {
-            System.out.println("Invalid Input!");
+            System.out.print("Invalid input!");
+
         }
 
 
