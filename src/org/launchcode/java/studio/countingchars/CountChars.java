@@ -1,14 +1,22 @@
 package org.launchcode.java.studio.countingchars;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class CountChars {
-    public static void main(String[] args) {
-        System.out.println("Enter the string: ");
-        Scanner input = new Scanner(System.in);
-        String testString = input.nextLine();
+    public static void main(String[] args) throws IOException {
+
+//        System.out.println("Enter the string: ");
+//        Scanner input = new Scanner(System.in);
+//        String testString = input.nextLine();
+        Path filename = Path.of("C:\\Users\\deeps\\Downloads\\java-practice\\java-web-dev-exercises\\src\\textfile.txt");
+        String testString = Files.readString(filename);
+
+
         HashMap<Character, Integer> result = new HashMap<>();
         char[] charInString = testString.toLowerCase().toCharArray();
 
