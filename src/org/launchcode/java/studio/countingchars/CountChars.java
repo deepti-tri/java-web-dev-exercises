@@ -1,6 +1,7 @@
 package org.launchcode.java.studio.countingchars;
 
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -13,7 +14,7 @@ public class CountChars {
 //        System.out.println("Enter the string: ");
 //        Scanner input = new Scanner(System.in);
 //        String testString = input.nextLine();
-        Path filename = Path.of("C:\\Users\\deeps\\Downloads\\java-practice\\java-web-dev-exercises\\src\\textfile.txt");
+        Path filename = FileSystems.getDefault().getPath("src","textfile.txt");
         String testString = Files.readString(filename);
 
 
